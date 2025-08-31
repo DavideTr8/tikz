@@ -1,0 +1,95 @@
+% Common TikZ styles for consistent appearance
+% Load this file in your main document with: \input{styles/common-styles.tex}
+
+% Define common colors
+\definecolor{primaryblue}{RGB}{52, 152, 219}
+\definecolor{primaryred}{RGB}{231, 76, 60}
+\definecolor{primarygreen}{RGB}{46, 204, 113}
+\definecolor{primaryorange}{RGB}{230, 126, 34}
+\definecolor{primarypurple}{RGB}{155, 89, 182}
+\definecolor{lightgray}{RGB}{236, 240, 241}
+\definecolor{darkgray}{RGB}{52, 73, 94}
+
+% Node styles
+\tikzset{
+    % Basic node styles
+    basic/.style={
+        draw,
+        rectangle,
+        minimum width=2cm,
+        minimum height=1cm,
+        text centered,
+        font=\footnotesize
+    },
+    % Process node
+    process/.style={
+        basic,
+        fill=primaryblue!20,
+        draw=primaryblue
+    },
+    % Decision node
+    decision/.style={
+        diamond,
+        draw=primaryorange,
+        fill=primaryorange!20,
+        text width=1.5cm,
+        text centered,
+        font=\footnotesize
+    },
+    % Start/End node
+    startstop/.style={
+        basic,
+        rounded corners=0.5cm,
+        fill=primarygreen!20,
+        draw=primarygreen
+    },
+    % Data node
+    data/.style={
+        basic,
+        fill=primarypurple!20,
+        draw=primarypurple
+    },
+    % Arrow styles
+    arrow/.style={
+        thick,
+        ->,
+        >=stealth
+    },
+    % Highlighted arrow
+    highlight-arrow/.style={
+        very thick,
+        ->,
+        >=stealth,
+        color=primaryred
+    },
+    % Dotted arrow
+    dotted-arrow/.style={
+        thick,
+        ->,
+        >=stealth,
+        dotted
+    },
+    % Axis styles
+    axis/.style={
+        thick,
+        ->,
+        >=stealth
+    },
+    % Grid style
+    grid/.style={
+        help lines,
+        color=lightgray
+    },
+    % Function plot style
+    plot/.style={
+        thick,
+        color=primaryblue,
+        smooth
+    },
+    % Point style
+    point/.style={
+        circle,
+        fill=primaryred,
+        inner sep=2pt
+    }
+}

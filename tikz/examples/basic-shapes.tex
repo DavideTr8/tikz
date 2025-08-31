@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=1]
+    % Rectangle
+    \draw[fill=primaryblue!20, draw=primaryblue, thick] (0,0) rectangle (2,1);
+    \node at (1,0.5) {Rectangle};
+    
+    % Circle
+    \draw[fill=primarygreen!20, draw=primarygreen, thick] (3,0.5) circle (0.7);
+    \node at (3,0.5) {Circle};
+    
+    % Triangle
+    \draw[fill=primaryred!20, draw=primaryred, thick] (5,0) -- (6,1.5) -- (7,0) -- cycle;
+    \node at (6,0.5) {Triangle};
+    
+    % Ellipse
+    \draw[fill=primaryorange!20, draw=primaryorange, thick] (8,0.5) ellipse (1 and 0.6);
+    \node at (8,0.5) {Ellipse};
+    
+    % Polygon
+    \draw[fill=primarypurple!20, draw=primarypurple, thick] 
+        (1,-2) -- (2,-1.5) -- (2.5,-2.5) -- (1.5,-3) -- (0.5,-2.5) -- cycle;
+    \node at (1.5,-2.25) {Pentagon};
+    
+    % Star
+    \draw[fill=yellow!40, draw=orange, thick] 
+        (5,-2) -- (5.3,-2.7) -- (6,-2.7) -- (5.5,-3.2) -- (5.7,-3.9) -- 
+        (5,-3.5) -- (4.3,-3.9) -- (4.5,-3.2) -- (4,-2.7) -- (4.7,-2.7) -- cycle;
+    \node at (5,-4.2) {Star};
+\end{tikzpicture}

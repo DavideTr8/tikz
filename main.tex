@@ -1,0 +1,75 @@
+\documentclass[11pt,a4paper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% Page layout
+\usepackage[margin=2cm]{geometry}
+
+% TikZ and related packages
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tikz-cd}
+\usepackage{circuitikz}
+\usepackage{tikz-3dplot}
+
+% TikZ libraries
+\usetikzlibrary{
+    arrows,
+    arrows.meta,
+    calc,
+    decorations.markings,
+    decorations.pathreplacing,
+    fit,
+    positioning,
+    shapes,
+    shapes.geometric,
+    patterns,
+    matrix,
+    trees,
+    backgrounds,
+    shadows,
+    plotmarks
+}
+
+% PGFPlots settings
+\pgfplotsset{compat=1.18}
+
+% Custom styles
+\input{styles/common-styles.tex}
+
+% Document information
+\title{TikZ Graphics Collection}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Complete Graph K4}
+
+This document contains a complete graph with 4 nodes (A, B, C, D) where every node is connected to every other node.
+
+\begin{figure}[h]
+    \centering
+    \resizebox{\textwidth}{!}{\input{tikz/figures/complete-graph-k4-main.tex}}
+    \caption{Complete Graph K4 with nodes A, B, C, and D}
+    \label{fig:complete-graph-k4}
+\end{figure}
+
+\section{GNN Architecture for Road Networks}
+
+This diagram illustrates the flow from a road network graph through a Graph Neural Network (GNN) layer to produce a city embedding vector.
+
+\begin{figure}[h]
+    \centering
+    \input{tikz/figures/gnn-architecture.tex}
+    \caption{GNN Architecture: Road network processed through GNN layer to generate city embedding vector}
+    \label{fig:gnn-road-network}
+\end{figure}
+
+\end{document}

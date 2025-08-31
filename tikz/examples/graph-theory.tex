@@ -1,0 +1,29 @@
+\begin{tikzpicture}[node distance=1.5cm]
+    % Nodes
+    \node[circle, draw, fill=primaryblue!20] (A) {A};
+    \node[circle, draw, fill=primaryblue!20, right of=A] (B) {B};
+    \node[circle, draw, fill=primaryblue!20, below of=A] (C) {C};
+    \node[circle, draw, fill=primaryblue!20, below of=B] (D) {D};
+    \node[circle, draw, fill=primaryblue!20, below right of=C] (E) {E};
+    
+    % Edges
+    \draw[thick] (A) -- (B);
+    \draw[thick] (A) -- (C);
+    \draw[thick] (B) -- (D);
+    \draw[thick] (C) -- (D);
+    \draw[thick] (C) -- (E);
+    \draw[thick] (D) -- (E);
+    \draw[thick] (A) -- (D);
+    
+    % Labels
+    \node[above] at ($(A)!0.5!(B)$) {5};
+    \node[left] at ($(A)!0.5!(C)$) {3};
+    \node[right] at ($(B)!0.5!(D)$) {2};
+    \node[below] at ($(C)!0.5!(D)$) {4};
+    \node[below left] at ($(C)!0.5!(E)$) {6};
+    \node[below right] at ($(D)!0.5!(E)$) {1};
+    \node[above right] at ($(A)!0.5!(D)$) {7};
+    
+    % Title
+    \node[above=1cm of A] {\textbf{Graph Theory Example}};
+\end{tikzpicture}

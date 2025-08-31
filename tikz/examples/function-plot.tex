@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        width=10cm,
+        height=6cm,
+        xlabel={$x$},
+        ylabel={$y$},
+        title={Function Plots Example},
+        grid=major,
+        legend pos=north west,
+        domain=-3:3,
+        samples=100
+    ]
+    
+    % Plot sin(x)
+    \addplot[plot, color=primaryblue] {sin(deg(x))};
+    \addlegendentry{$\sin(x)$}
+    
+    % Plot cos(x)
+    \addplot[plot, color=primaryred] {cos(deg(x))};
+    \addlegendentry{$\cos(x)$}
+    
+    % Plot x^2/3
+    \addplot[plot, color=primarygreen] {x^2/3};
+    \addlegendentry{$\frac{x^2}{3}$}
+    
+    % Mark some points
+    \addplot[only marks, mark=*, mark size=2pt, color=primaryorange] 
+        coordinates {(-2, {sin(deg(-2))}) (0,0) (2, {sin(deg(2))})};
+    \addlegendentry{Sample points}
+    
+    \end{axis}
+\end{tikzpicture}

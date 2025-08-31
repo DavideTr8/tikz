@@ -1,0 +1,39 @@
+# TikZ Project - Git Ignore File
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.toc
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# Output directory (comment out if you want to track PDFs)
+output/
+
+# Temporary files
+*~
+*.tmp
+*.bak
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Editor specific files
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+
+# Backup files
+*.backup

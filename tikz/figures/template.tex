@@ -1,0 +1,26 @@
+% Template for standalone TikZ diagrams
+% Copy this template when creating new TikZ figures
+
+\documentclass[tikz,border=5pt]{standalone}
+
+% Include common styles
+\input{../../styles/common-styles.tex}
+
+\begin{document}
+\begin{tikzpicture}
+    % Your TikZ code goes here
+    
+    % Example: Simple coordinate system
+    \draw[axis] (-2,0) -- (2,0) node[right] {$x$};
+    \draw[axis] (0,-2) -- (0,2) node[above] {$y$};
+    
+    % Example: A simple function
+    \draw[plot] plot[domain=-1.5:1.5] (\x, {\x*\x});
+    
+    % Example: Some points
+    \fill[point] (-1,1) circle (2pt);
+    \fill[point] (0,0) circle (2pt);
+    \fill[point] (1,1) circle (2pt);
+    
+\end{tikzpicture}
+\end{document}
